@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old Town Banquet Hall | Elegant Events in the Heart of the City</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-logo">OTBH</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView();">Book a Tour</button>
+    </nav>
+
+    <header id="home" class="hero">
+        <h1 class="hero-title">Old Town Banquet Hall</h1>
+        <p class="hero-subtitle">Where Your Elegant Story Begins</p>
+    </header>
+
+    <section id="services" class="section services-section">
+        <h2>Unparalleled Services</h2>
+        <div class="service-cards">
+            <div class="card">
+                <h3>Weddings</h3>
+                <p>A luxurious setting for your special day. Dedicated planning and sophisticated catering.</p>
+            </div>
+            <div class="card">
+                <h3>Corporate Events</h3>
+                <p>Professional, state-of-the-art facilities for conferences, galas, and corporate meetings.</p>
+            </div>
+            <div class="card">
+                <h3>Social Gatherings</h3>
+                <p>Perfect for birthdays, anniversaries, and family celebrations, designed to impress.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section gallery-section">
+        <h2>The Grand Hall</h2>
+        <p>A glimpse into the elegance and grandeur of our venue. </p>
+        <div class="gallery-placeholder">
+            <p>Image Gallery Placeholder</p>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+        <h2>Contact & Booking</h2>
+        <p>Ready to plan your event? Fill out the form below or call us at (555) 123-4567.</p>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <select required>
+                <option value="" disabled selected>Event Type</option>
+                <option value="wedding">Wedding</option>
+                <option value="corporate">Corporate Event</option>
+                <option value="social">Social Gathering</option>
+                <option value="other">Other</option>
+            </select>
+            <textarea placeholder="Tell us about your event..." rows="5"></textarea>
+            <button type="submit" class="cta-button">Send Inquiry</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Old Town Banquet Hall. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

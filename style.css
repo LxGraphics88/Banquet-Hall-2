@@ -1,0 +1,307 @@
+/* --- Color Palette --- */
+:root {
+    --color-navy: #001F3F; /* Deep Navy Blue */
+    --color-gold: #FFD700; /* Standard Gold */
+    --color-light-gold: #F0E68C; /* Light Gold/Khaki for accents */
+    --color-white: #ffffff;
+    --color-grey-bg: #f4f4f4; /* Light background for sections */
+}
+
+/* --- Base Styles & Typography --- */
+body {
+    font-family: 'Cormorant Garamond', serif; /* Modern, clean body font */
+    margin: 0;
+    padding: 0;
+    color: var(--color-navy);
+    line-height: 1.6;
+    background-color: var(--color-white);
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-gold);
+    margin: 10px auto 0;
+}
+
+/* --- Navigation Bar --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-navy);
+    padding: 15px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-logo {
+    color: var(--color-gold);
+    font-size: 1.8em;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif; /* Use a script/serif font for the logo */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li a {
+    color: var(--color-white);
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: color 0.3s, background-color 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav ul li a:hover {
+    color: var(--color-gold);
+}
+
+/* --- Call to Action Button --- */
+.cta-button {
+    background-color: var(--color-gold);
+    color: var(--color-navy);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s, transform 0.2s;
+    border-radius: 3px;
+}
+
+.cta-button:hover {
+    background-color: var(--color-light-gold);
+    transform: translateY(-2px);
+}
+
+/* --- Hero Section --- */
+.hero {
+    background: url('hero-bg-placeholder.jpg') center/cover no-repeat;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--color-white);
+    position: relative;
+}
+
+/* Elegant Overlay for better text readability */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 31, 63, 0.5); /* Semi-transparent Navy overlay */
+    z-index: 1;
+}
+
+.hero > * {
+    z-index: 2; /* Ensure text is above the overlay */
+}
+
+.hero-title {
+    /* Playfair Display is an elegant font for the cursive effect */
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 6em;
+    margin-bottom: 10px;
+    color: var(--color-gold);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-subtitle {
+    font-size: 1.8em;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-light-gold);
+}
+
+/* --- General Section Styling --- */
+.section {
+    padding: 80px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services-section {
+    background-color: var(--color-grey-bg);
+}
+
+/* --- Services Section Cards --- */
+.service-cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.card {
+    background-color: var(--color-white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-top: 5px solid var(--color-navy);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    color: var(--color-gold);
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+/* --- Gallery Section --- */
+.gallery-section {
+    text-align: center;
+}
+
+.gallery-placeholder {
+    height: 400px;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    font-size: 1.5em;
+    border-radius: 8px;
+}
+
+/* --- Contact Section & Form --- */
+.contact-section {
+    background-color: var(--color-navy);
+    color: var(--color-white);
+    text-align: center;
+}
+
+.contact-section h2 {
+    color: var(--color-white);
+}
+
+.contact-section h2::after {
+    background-color: var(--color-gold);
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 40px auto 0;
+    display: grid;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--color-light-gold);
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-white);
+    box-sizing: border-box; /* Important for padding/border within width */
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Style the submit button specifically in the contact form */
+.contact-form .cta-button {
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #00152a; /* Slightly darker Navy */
+    color: var(--color-light-gold);
+    text-align: center;
+    padding: 20px 5%;
+    font-size: 0.9em;
+}
+
+.footer-links a {
+    color: var(--color-light-gold);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--color-gold);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 4em;
+    }
+    .hero-subtitle {
+        font-size: 1.2em;
+    }
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+    nav ul li a {
+        padding: 8px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .cta-button {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .service-cards {
+        flex-direction: column;
+    }
+
+/* Add this at the end of style.css */
+nav.scrolled {
+    background-color: rgba(0, 31, 63, 0.95); /* Slightly transparent Navy when scrolled */
+}
+}
