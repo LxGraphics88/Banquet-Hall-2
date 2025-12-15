@@ -101,7 +101,7 @@ nav ul li a:hover {
 
 /* --- Hero Section --- */
 .hero {
-    background: url('images/hall.jpeg') center/cover no-repeat;
+    background: url('hall.jpeg') center/cover no-repeat;
     height: 100vh; /* Full viewport height */
     display: flex;
     flex-direction: column;
@@ -306,3 +306,4 @@ nav.scrolled {
 }
 
 }
+
