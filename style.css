@@ -101,7 +101,7 @@ nav ul li a:hover {
 
 /* --- Hero Section --- */
 .hero {
-    background: url('hero-bg-placeholder.jpg') center/cover no-repeat;
+    background: url('images/hall.jpeg') center/cover no-repeat;
     height: 100vh; /* Full viewport height */
     display: flex;
     flex-direction: column;
@@ -304,4 +304,5 @@ footer {
 nav.scrolled {
     background-color: rgba(0, 31, 63, 0.95); /* Slightly transparent Navy when scrolled */
 }
+
 }
